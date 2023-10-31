@@ -1,0 +1,98 @@
+{
+	"produtos": [
+		{
+			"id": 1,
+			"nome": "Pizza de Mussarela",
+			"descricao": "Massa de pizza com molho de tomate, mussarela derretida e azeitonas.",
+			"preco": 18.5,
+			"categoria_id": 2
+		},
+		{
+			"id": 2,
+			"nome": "Pizza de Calabresa",
+			"descricao": "Massa de pizza com molho de tomate, calabresa, cebola e azeitonas.",
+			"preco": 20.5,
+			"categoria_id": 2
+		},
+		{
+			"id": 3,
+			"nome": "Pizza de Frango com Catupiry",
+			"descricao": "Massa de pizza com molho de tomate, frango desfiado e catupiry.",
+			"preco": 22.5,
+			"categoria_id": 2
+		},
+		{
+			"id": 4,
+			"nome": "Pizza de Quatro Queijos",
+			"descricao": "Massa de pizza com molho de tomate, mussarela, provolone, gorgonzola e parmesão.",
+			"preco": 21.5,
+			"categoria_id": 2
+		},
+		{
+			"id": 5,
+			"nome": "Pizza Vegetariana",
+			"descricao": "Uma pizza repleta de ingredientes frescos e saudáveis, incluindo pimentões, cogumelos, cebolas, azeitonas e mussarela derretida. Perfeita para os amantes de vegetais!",
+			"preco": 20.0,
+			"categoria_id": 2
+		},
+		{
+			"id": 6,
+			"nome": "Coca cola",
+			"descricao": "",
+			"preco": 7.5,
+			"categoria_id": 2
+		},
+		{
+			"id": 7,
+			"nome": "Água",
+			"descricao": "",
+			"preco": 5.5,
+			"categoria_id": 2
+		},
+		{
+			"id": 8,
+			"nome": "Mate Leão",
+			"descricao": "",
+			"preco": 6,
+			"categoria_id": 2
+		},
+		{
+			"id": 9,
+			"nome": "Guaraná",
+			"descricao": "",
+			"preco": 7.5,
+			"categoria_id": 2
+		},
+		{
+			"id": 10,
+			"nome": "Pepsi",
+			"descricao": "",
+			"preco": 7.5,
+			"categoria_id": 2
+		},
+		{
+			"id": 11,
+			"nome": "Suco de Laranja",
+			"descricao": "",
+			"preco": 8.5,
+			"categoria_id": 2
+		},
+		{
+			"id": 12,
+			"nome": "MilkShake",
+			"descricao": "",
+			"preco": 12.5,
+			"categoria_id": 2
+		}
+	],
+	"categorias": [
+		{
+			"id": 1,
+			"nome": "Pizzas"
+		},
+		{
+			"id": 2,
+			"nome": "Bebidas"
+		}
+	]
+}
