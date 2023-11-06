@@ -8,7 +8,7 @@ import axios from 'axios';
 const AppNavigation = ({ navigation }) => {
 	// State variables
 	const [quantidade, setQuantidade] = useState(1);
-	const [selectedBebida, setSelectedBebida] = useState(null);
+	const [selectedBebida, setSelectedBebida] = useState(false);
 	const [produto, setProduto] = useState(null);
 	const [bebidas, setBebidas] = useState([]);
 
@@ -30,13 +30,7 @@ const AppNavigation = ({ navigation }) => {
 		axios
 			.get(bebidasUrl)
 			.then((response) => {
-				if (Array.isArray(response.data)) {
-					// Filter the array to include only the first two beverages
-					const filteredBebidas = response.data.slice(5, 12);
-					setBebidas(filteredBebidas);
-				} else {
-					console.error('Erro: As informações das bebidas não são um array:', response.data);
-				}
+					setBebidas(response.data.filter(val => val.categoria_id == 2));
 			})
 			.catch((error) => {
 				console.error('Erro ao buscar informações das bebidas:', error);
@@ -58,14 +52,19 @@ const AppNavigation = ({ navigation }) => {
 				{produto && (
 					<View>
 						<Text style={styles.pizzaName}>{produto.nome}</Text>
-						<Text style={styles.pizzaPrice}>{`R$${produto.preco}`}</Text>
+
+						
+						{!!selectedBebida && (<Text style={styles.pizzaPrice}>{`R$${produto.preco+selectedBebida.preco}`}</Text>)} 
+					
+						
+						
 						<Text style={styles.pizzaDescriprition}>{produto.descricao}</Text>
 					</View>
 				)}
 
 				<Picker
-					selectedValue={selectedBebida ? selectedBebida.id : null}
-					onValueChange={(value) => setSelectedBebida(bebidas.find((bebida) => bebida.id === value))}
+					selectedValue={!selectedBebida ? selectedBebida.id : null} // duvida
+					onValueChange={(value) => setSelectedBebida(bebidas.filter((bebida) => bebida.id === value))}
 					style={styles.picker}>
 					<Picker.Item label="Selecione uma bebida" value={null} />
 					{bebidas.map((bebida) => (

@@ -6,6 +6,36 @@ import { Link } from 'expo-router';
 const EscolhaScreen = ({ navigation }) => {
 	return (
 		<View style={styles.container}>
+			
+
+			
+
+			<Text style={styles.sectionTitle}>Nossos Combos do Dia</Text>
+			<ScrollView horizontal showsHorizontalScrollIndicator={false}>
+			<Link href="/lanche1">
+				<Image source={require('../../images/pizza1.jpg')} style={styles.carouselItem2} />
+			</Link>
+			<Link href="/lanche3">
+				<Image source={require('../../images/pizza3.jpg')} style={styles.carouselItem2} />
+			</Link>
+			<Link href="/lanche2">
+				<Image source={require('../../images/pizza2.jpg')} style={styles.carouselItem2} />
+			</Link>	
+			<Link href="/lanche4">	
+				<Image source={require('../../images/pizza4.jpg')} style={styles.carouselItem2} />
+			</Link>	
+			<Link href="/lanche5">
+				<Image source={require('../../images/pizza5.jpg')} style={styles.carouselItem2} />
+			</Link>
+			</ScrollView>
+			<ScrollView horizontal showsHorizontalScrollIndicator={false}>
+				<Image source={require('../../images/coca.jpg')} style={styles.carouselItem2} />
+				<Image source={require('../../images/agua.jpg')} style={styles.carouselItem2} />
+				<Image source={require('../../images/suco.jpg')} style={styles.carouselItem2} />
+				<Image source={require('../../images/suco.jpg')} style={styles.carouselItem2} />
+				<Image source={require('../../images/coca.jpg')} style={styles.carouselItem2} />
+			</ScrollView>
+			
 			<View style={styles.Icons}>
 				<TouchableOpacity>
 					<FontAwesome5 name="home" size={24} />
@@ -21,47 +51,42 @@ const EscolhaScreen = ({ navigation }) => {
 					</TouchableOpacity>
 				</Link>
 			</View>
-
-			<Text style={styles.sectionTitle}>Nossos Combos do Dia</Text>
-			<ScrollView showsVerticalScrollIndicator={false}>
+			
+			{/* <ScrollView showsVerticalScrollIndicator={false}>
 				<Link href="/lanche1">
 					<View style={styles.carouselItemContainer}>
-						<Image source={require('../../images/pizza1.jpg')} style={styles.carouselItem} />
-						<Image source={require('../../images/coca.jpg')} style={styles.carouselItem2} />
+						<Image source={require('../../images/coca.jpg')} style={styles.carouselItem} />
 					</View>
 				</Link>
 				<Link href="/lanche3">
 					<View style={styles.carouselItemContainer}>
-						<Image source={require('../../images/pizza3.jpg')} style={styles.carouselItem} />
-						<Image source={require('../../images/agua.jpg')} style={styles.carouselItem2} />
+						<Image source={require('../../images/agua.jpg')} style={styles.carouselItem} />
 					</View>
 				</Link>
 				<Link href="/lanche2">
 					<View style={styles.carouselItemContainer}>
-						<Image source={require('../../images/pizza2.jpg')} style={styles.carouselItem} />
-						<Image source={require('../../images/suco.jpg')} style={styles.carouselItem2} />
+						<Image source={require('../../images/suco.jpg')} style={styles.carouselItem} />
 					</View>
 				</Link>
 				<Link href="/lanche4">
 					<View style={styles.carouselItemContainer}>
-						<Image source={require('../../images/pizza4.jpg')} style={styles.carouselItem} />
-						<Image source={require('../../images/suco.jpg')} style={styles.carouselItem2} />
+						<Image source={require('../../images/suco.jpg')} style={styles.carouselItem} />
 					</View>
 				</Link>
 				<Link href="/lanche5">
 					<View style={styles.carouselItemContainer}>
-						<Image source={require('../../images/pizza5.jpg')} style={styles.carouselItem} />
-						<Image source={require('../../images/coca.jpg')} style={styles.carouselItem2} />
+						<Image source={require('../../images/coca.jpg')} style={styles.carouselItem} />
 					</View>
 				</Link>
-			</ScrollView>
+			</ScrollView> */}
 		</View>
 	);
 };
 
 const styles = StyleSheet.create({
 	container: {
-		backgroundColor: 'black',
+		backgroundColor: 'red',
+		height: '915'
 	},
 	carouselItemContainer: {
 		flexDirection: 'row',

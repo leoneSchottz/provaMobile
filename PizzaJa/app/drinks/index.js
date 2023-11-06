@@ -6,6 +6,19 @@ import { Link } from 'expo-router';
 const EscolhaScreen = ({ navigation }) => {
 	return (
 		<View style={styles.container}>
+			
+
+			<Text style={styles.sectionTitle}>Bebidas Disponiveis</Text>
+			<ScrollView showsHorizontalScrollIndicator={false}>
+				<Image source={require('../../images/coca.jpg')} style={styles.carouselItem2} />
+				<Image source={require('../../images/guarana.jpg')} style={styles.carouselItem2} />
+				<Image source={require('../../images/agua.jpg')} style={styles.carouselItem2} />
+				<Image source={require('../../images/mate.jpg')} style={styles.carouselItem2} />
+				<Image source={require('../../images/pepsi.jpg')} style={styles.carouselItem2} />
+				<Image source={require('../../images/suco.jpg')} style={styles.carouselItem2} />
+				<Image source={require('../../images/milkshake.jpg')} style={styles.carouselItem2} />
+			</ScrollView>
+
 			<View style={styles.bottomIcons}>
 				<Link href="/home">
 					<TouchableOpacity>
@@ -23,17 +36,6 @@ const EscolhaScreen = ({ navigation }) => {
 					</TouchableOpacity>
 				</Link>
 			</View>
-
-			<Text style={styles.sectionTitle}>Bebidas Disponiveis</Text>
-			<ScrollView horizontal showsHorizontalScrollIndicator={false}>
-				<Image source={require('../../images/coca.jpg')} style={styles.carouselItem2} />
-				<Image source={require('../../images/guarana.jpg')} style={styles.carouselItem2} />
-				<Image source={require('../../images/agua.jpg')} style={styles.carouselItem2} />
-				<Image source={require('../../images/mate.jpg')} style={styles.carouselItem2} />
-				<Image source={require('../../images/pepsi.jpg')} style={styles.carouselItem2} />
-				<Image source={require('../../images/suco.jpg')} style={styles.carouselItem2} />
-				<Image source={require('../../images/milkshake.jpg')} style={styles.carouselItem2} />
-			</ScrollView>
 		</View>
 	);
 };
@@ -41,7 +43,6 @@ const EscolhaScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
 	container: {
 		backgroundColor: 'black',
-		height: '100%',
 	},
 	carouselItem2: {
 		width: 300,
@@ -57,6 +58,10 @@ const styles = StyleSheet.create({
 		backgroundColor: '#FE5F00',
 		paddingVertical: 10,
 		color: 'black',
+		alignItems: 'center',
+		position: 'relative',
+		bottom : '0',
+		left: '0'
 	},
 	sectionTitle: {
 		fontSize: 30,

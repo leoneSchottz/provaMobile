@@ -30,13 +30,7 @@ const AppNavigation = ({ navigation }) => {
 		axios
 			.get(bebidasUrl)
 			.then((response) => {
-				if (Array.isArray(response.data)) {
-					// Filter the array to include only the first two beverages
-					const filteredBebidas = response.data.slice(5, 12);
-					setBebidas(filteredBebidas);
-				} else {
-					console.error('Erro: As informações das bebidas não são um array:', response.data);
-				}
+					setBebidas(response.data.filter(val => val.categoria_id == 2));
 			})
 			.catch((error) => {
 				console.error('Erro ao buscar informações das bebidas:', error);
@@ -52,7 +46,7 @@ const AppNavigation = ({ navigation }) => {
 				<Text style={styles.headerText}>Detalhes</Text>
 			</View>
 
-			<Image source={require('../../images/pizza2.jpg')} style={styles.pizzaImage} />
+			<Image source={require('../../images/pizza1.jpg')} style={styles.pizzaImage} />
 
 			<View style={styles.pizzaDetails}>
 				{produto && (
@@ -80,7 +74,7 @@ const AppNavigation = ({ navigation }) => {
 		</View>
 	);
 };
-// Styles
+
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
